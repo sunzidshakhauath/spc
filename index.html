@@ -15,20 +15,55 @@
 </head>
 <body>
     <section>
-        <h1>
-            <center>"...Programming Club..."</center>
-        </h1>
+        <div class="club-heading">
+            <h1>
+                <center>"...Programming Club..."</center>
+            </h1>
+        </div>
         <nav>
             <a href="index.html"><img src="Images/logo.png"></a>
             <div class="nav-links">
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">BLOG</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="/Links/about.html">ABOUT</a></li>
+                    <li><a href="/Links/blog.html">BLOG</a></li>
+                    <li><a href="#" onclick="showPopup()">CONTACT</a></li>
                 </ul>
             </div>
         </nav>
     </section>
+
+    <!-- Hidden pop-up overlay -->
+    <div id="popupOverlay" class="overlay">
+        <div class="popup">
+            <h2>• CONTACT •</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+            <a href="#" onclick="hidePopup()">&#10005;</a>
+        </div>
+    </div>
+
+    <!-- JavaScript code to show/hide the pop-up overlay -->
+    <script>
+        function showPopup() {
+            document.getElementById("popupOverlay").style.display = "block";
+            setTimeout(function () {
+                document.getElementById("popupOverlay").classList.add("show");
+            }, 10);
+        }
+
+        function hidePopup() {
+            document.getElementById("popupOverlay").classList.remove("show");
+            setTimeout(function () {
+                document.getElementById("popupOverlay").style.display = "none";
+            }, 300);
+        }
+    </script>
+
 </body>
 </html>
