@@ -1,6 +1,11 @@
 *{font-family: 'Montserrat', sans-serif;
     font-family: 'Poppins', sans-serif;}
 
+*::selection    {
+    color: white;
+    background-color: black;
+}
+
 *{
     margin: 0;
     padding: 0;
